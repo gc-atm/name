@@ -363,10 +363,10 @@
                 mobileMenu.classList.toggle('hidden');
             });
 
-            // 修复二维码生成 - 指向本地实际页面
+            // 修复二维码生成 - 指向同目录页面（适配GitHub Pages）
             try {
                 new QRCode(document.getElementById('legal-qrcode'), {
-                    text: window.location.href.replace('index.html', 'legal-info.html'),
+                    text: './legal-info.html',
                     width: 220,
                     height: 220,
                     colorDark: '#165DFF',
@@ -380,7 +380,7 @@
 
             try {
                 new QRCode(document.getElementById('integrity-qrcode'), {
-                    text: window.location.href.replace('index.html', 'integrity-info.html'),
+                    text: './integrity-info.html',
                     width: 220,
                     height: 220,
                     colorDark: '#36D399',
@@ -394,7 +394,7 @@
 
             try {
                 new QRCode(document.getElementById('service-qrcode'), {
-                    text: window.location.href.replace('index.html', 'service-web.html'),
+                    text: './service-web.html',
                     width: 220,
                     height: 220,
                     colorDark: '#FF7D00',
